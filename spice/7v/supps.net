@@ -1,0 +1,22 @@
+* C:\Users\evan6\Documents\Projects\Altium\Projects\abetterbreadboard\spice\7v\supps.asc
+V1 N001 0 12
+XU1 N002 N007 N005 N001 N001 MP_01 NC_02 N009 N004 N006 0 LT3680
+L1 N002 N005 4.7µ
+C1 N005 N007 470n
+R1 N002 N009 78.6k
+R2 N009 0 10k
+D1 0 N005 MBRS360
+R3 N004 N008 20k
+C2 N008 0 22n
+R4 N006 0 63.4k
+C3 N002 0 33µ
+XU2 N002 0 N003 0 VeRES
+V2 N003 0 PULSE(100 5 3m 1n 1n 2m 4m)
+C4 N004 0 470p
+.model D D
+.lib C:\Users\evan6\Documents\LTspiceXVII\lib\cmp\standard.dio
+.tran 10m startup uic
+.lib ESM\Ideal Components\VEQRSIM.cir
+.lib LT3680.sub
+.backanno
+.end
